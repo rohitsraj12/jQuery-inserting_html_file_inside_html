@@ -1,0 +1,29 @@
+
+<h2>
+    logo
+</h2>
+
+<ul>
+    <li><a class="" href="contact.html">contact</a></li>
+    <li><a class="" href="index.html">home</a></li>
+    <li><a class="" href="about.html">about<a></li>
+    <!-- <li><a class="" href="work.html">contact</a></li> -->
+    <!-- <li><a class="" href="service.html">contact</a></li> -->
+</ul>
+
+<script>
+$(document).ready(function(){
+    var url = $('#navigation_file').attr('url-data');
+    var navLink = $("li a");
+
+    $(navLink).each(function(index, value){
+        var link = this.href;
+
+        if (link.match(url)) {
+            $(this).addClass("active");
+        }
+    });     
+
+
+})
+</script>
